@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatibe" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>Eventos de Dom v-on</p>
+        <button v-on:click="changeVisibility">Pelis/Condicionales</button>
+        <button @click="changeVisibility">Pelis/Condicionales</button>
+        {{mensaje}}
+        <p>v-bin = :</p>
+        <p>v-on:click = @click</p>
+        <h1>{{saludo}}</h1>
+        <ul v-if="mostrar">
+            <li v-for="(show, index) in tvshows" :key="index">
+                <strong>{{show.name}}</strong>(Temporadas:{{show.seasons}})
+            </li>
+        </ul>
+
+        <div>
+            <span>Component</span>
+
+        </div>
+    <!--     <movie-card v-for="(movie, index) in movies"
+         :title="movie.title"
+            :img="movie.img"
+            :key="movie.index">
+
+
+        </movie-card> -->
+        <div>
+
+            <h2>Condicionales</h2>
+
+            <ul>
+                <li v-for="(item, index) in condicionales" :key="index">
+                    <strong>{{item}}</strong>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js" integrity="sha256-CMMTrj5gGwOAXBeFi7kNokqowkzbeL8ydAJy39ewjkQ="
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
