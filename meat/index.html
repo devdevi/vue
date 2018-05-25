@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- <div id="instrucciones">
+          <h1>Prueba Vue.js</h1>
+          <p>¡Hola! Usando <strong>Vue</strong> y una <strong>API</strong> que te entregamos, crea un menu acordeón con "Categoría de Productos", como el de la siguiente imagen:</p>
+          <img src="https://i.imgur.com/IPYOnG9.png" alt="Menu">
+          <p>La API te entrega cada categoría con un "id", un "name" y un "parent_id". El "parent_id"
+               indica a qué categoría pertenece cada una.</p>
+          <p>Fijarse en que el último de los menús tiene un submenu con más categorías:</p>
+          <img src="https://i.imgur.com/yUGb4Hn.png" alt="Menu 2">
+        </div>
+        <hr> -->
+    <div id="app">
+        <div>
+            <h2>Condicionales</h2>
+            <ul  v-for="item in info">
+                <li v-if="item.parent_id  === '1'" class="one">
+                    Categoria = {{ item.parent_id }}, Name={{item.name}}
+                </li>
+                <li  v-else-if="item.parent_id  === '81'" class="two">
+                        Categoria = {{ item.parent_id }}, Name={{item.name}}
+                </li>
+                <li  v-else-if="item.parent_id  === '18'" class="tree">
+                        Categoria = {{ item.parent_id }}, Name={{item.name}}
+                </li>
+                <li  v-else-if="item.parent_id  === '23'" class="four">
+                        Categoria = {{ item.parent_id }}, Name={{item.name}}
+                </li>
+                <li  v-else-if="item.parent_id  === '45'" class="five">
+                        Categoria = {{ item.parent_id }}, Name={{item.name}}
+                </li>
+                <li  v-else-if="item.parent_id  === '58'" class="six">
+                        Categoria = {{ item.parent_id }}, Name={{item.name}}
+                </li>
+                <li  v-else-if="item.parent_id  === '67'" class="seven">
+                        Categoria = {{ item.parent_id }}, Name={{item.name}}
+                </li>
+                <li  v-else-if="item.parent_id  === null">
+                        Sin Categoria, Name={{item.name}}
+                </li>
+                <li  v-else>
+                        Categoria = {{ item.parent_id }}, Name={{item.name}}
+                </li>
+              <!--   <li v-else>
+                        Categoria = {{ item.parent_id }}, Name={{item.name}}
+                </li> -->
+            </ul> 
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
